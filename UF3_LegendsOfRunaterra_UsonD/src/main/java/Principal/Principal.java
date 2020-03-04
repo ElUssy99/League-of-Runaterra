@@ -169,7 +169,7 @@ public class Principal {
 			System.out.println("	2. Editar mazo");
 			System.out.println("	3. Borrar mazo");
 			System.out.println("	4. Cargar mazos predefinidos");
-			System.out.println("	4. <-- Atras");
+			System.out.println("	5. <-- Atras");
 			System.out.print("Escoge una opcion: ");
 			int opcion = entrada.nextInt();
 			
@@ -182,6 +182,13 @@ public class Principal {
 				break;
 			case 3:
 				continuar = false;
+				break;
+			case 4:
+				
+				break;
+			case 5:
+				continuar = false;
+				juego(database);
 				break;
 			default:
 				break;
@@ -208,10 +215,8 @@ public class Principal {
 				
 				break;
 			case 2:
-				
-				break;
-			case 3:
 				continuar = false;
+				juego(database);
 				break;
 			default:
 				break;
