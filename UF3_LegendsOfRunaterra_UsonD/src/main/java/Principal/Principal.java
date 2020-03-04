@@ -114,10 +114,10 @@ public class Principal {
 		
 		List<Usuarios> usuarios = new ArrayList<Usuarios>();
 		
+		
 		for (Document document : docs) {
-			if (name == document.get("name")) {
-				if (pass == document.get("contra")) {
-					System.out.println("hola");
+			if (name.equalsIgnoreCase(document.getString("nombre"))) {
+				if (pass.equalsIgnoreCase(document.getString("contra"))) {
 					juego(database);
 				}
 			}
