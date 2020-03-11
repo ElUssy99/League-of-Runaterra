@@ -1,5 +1,6 @@
 package Objects;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Usuarios {
@@ -7,14 +8,14 @@ public class Usuarios {
 	private int id;
 	private String nombre;
 	private String contra;
-	private Cartas[] listaCartas;
-	private Mazos[] listaMazos;
+	private ArrayList<Integer> listaCartas;
+	private ArrayList<Integer> listaMazos;
 	
 	public Usuarios() {
 		super();
 	}
 
-	public Usuarios(int id, String nombre, String contra, Cartas[] listaCartas, Mazos[] listaMazos) {
+	public Usuarios(int id, String nombre, String contra, ArrayList<Integer> listaCartas, ArrayList<Integer> listaMazos) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -47,26 +48,26 @@ public class Usuarios {
 		this.contra = contra;
 	}
 	
-	public Cartas[] getListaCartas() {
+	public ArrayList<Integer> getListaCartas() {
 		return listaCartas;
 	}
 
-	public void setListaCartas(Cartas[] listaCartas) {
+	public void setListaCartas(ArrayList<Integer> listaCartas) {
 		this.listaCartas = listaCartas;
 	}
 
-	public Mazos[] getListaMazos() {
+	public ArrayList<Integer> getListaMazos() {
 		return listaMazos;
 	}
 
-	public void setListaMazos(Mazos[] listaMazos) {
+	public void setListaMazos(ArrayList<Integer> listaMazos) {
 		this.listaMazos = listaMazos;
 	}
 
 	@Override
 	public String toString() {
-		return "Usuarios [id=" + id + ", nombre=" + nombre + ", contra=" + contra + ", listaCartas="
-				+ Arrays.toString(listaCartas) + ", listaMazos=" + Arrays.toString(listaMazos) + "]";
+		return "Usuarios [id=" + id + ", nombre=" + nombre + ", contra=" + contra + ", listaCartas=" + listaCartas
+				+ ", listaMazos=" + listaMazos + "]";
 	}
 	
 }

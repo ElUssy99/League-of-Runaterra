@@ -1,17 +1,17 @@
 package Objects;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Mazos {
 	
 	private String id;
 	private String nombre;
 	private int valor;
-	private Cartas[] listaCartas;
+	private ArrayList<Integer> listaCartas;
 		
 	public Mazos() {}
 	
-	public Mazos(String id, String nombre, int valor, Cartas[] listaCartas) {
+	public Mazos(String id, String nombre, int valor, ArrayList<Integer> listaCartas) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -37,17 +37,17 @@ public class Mazos {
 	public void setValor(int valor) {
 		this.valor = valor;
 	}
-	public Cartas[] getListaCartas() {
+	public ArrayList<Integer> getListaCartas() {
 		return listaCartas;
 	}
-	public void setListaCartas(Cartas[] listaCartas) {
+	public void setListaCartas(ArrayList<Integer> listaCartas) {
 		this.listaCartas = listaCartas;
 	}
 
 	@Override
 	public String toString() {
 		return "Mazos [id=" + id + ", nombre=" + nombre + ", valor=" + valor + ", listaCartas="
-				+ Arrays.toString(listaCartas) + "]";
+				+ listaCartas + "]";
 	}
 	
 }
