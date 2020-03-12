@@ -201,7 +201,8 @@ public class LeagueOfRunaterra {
 		// Listar las cartas que tiene el usuario sin hacer una consulta a la Base de Datos
 		Scanner entrada = new Scanner(System.in);
 		
-		ArrayList<Mazos> mazo = new ArrayList<Mazos>();
+		Mazos m = new Mazos();
+		ArrayList<Integer> cartas = new ArrayList<Integer>();
 		
 		System.out.println("||=====================||");
 		System.out.println("|| LEAGUE OF RUNATERRA ||");
@@ -210,17 +211,20 @@ public class LeagueOfRunaterra {
 		
 		System.out.print("\nNombre del Mazo: ");
 		String nombre = entrada.nextLine();
+		m.setNombre(nombre);
 		System.out.println("Lista de Cartas (-1 para salir):");
+				
+		int contador = 1;
 		
-		boolean continuar = true;
-		
-		while(continuar) {
+		while (contador != 20) {
 			System.out.print("  Introduce un ID de Carta: ");
 			int id = entrada.nextInt();
 			
 			if (id == -1) {
 				break;
-			} else {
+			} else if () {
+				
+			}else {
 				MongoCollection<Document> collection = database.getCollection("Usuarios");
 
 				Document find = new Document("id", usuario.get("id")); 
@@ -245,7 +249,9 @@ public class LeagueOfRunaterra {
 					
 					for (Integer idCarta : listaCartas) {
 						if (id == idCarta) {
-							
+							cartas.add(id);
+							contador++;
+							break;
 						}
 					}
 				} else {
