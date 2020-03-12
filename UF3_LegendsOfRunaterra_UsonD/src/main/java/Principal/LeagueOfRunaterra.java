@@ -201,7 +201,7 @@ public class LeagueOfRunaterra {
 		// Listar las cartas que tiene el usuario sin hacer una consulta a la Base de Datos
 		Scanner entrada = new Scanner(System.in);
 		
-		ArrayList<Mazos> mazos = new ArrayList<Mazos>();
+		ArrayList<Mazos> mazo = new ArrayList<Mazos>();
 		
 		System.out.println("||=====================||");
 		System.out.println("|| LEAGUE OF RUNATERRA ||");
@@ -241,12 +241,12 @@ public class LeagueOfRunaterra {
 					listaMazos = (ArrayList<Integer>) d.get("listaMazos");
 					u.setListaMazos(listaMazos);
 					
-					System.out.println("	" + u.toString());
+					System.out.println("  " + u.toString());
 					
-					for (int i = 0; i < u.getListaCartas().size(); i++) {
-//						if (id == u.getListaCartas()[i]) {
-//							
-//						}
+					for (Integer idCarta : listaCartas) {
+						if (id == idCarta) {
+							
+						}
 					}
 				} else {
 					System.err.println("No existe esta carta. Prueba con otra.");
