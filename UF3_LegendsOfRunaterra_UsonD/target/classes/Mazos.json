@@ -1,0 +1,20 @@
+[
+ {
+    "id_mazo": 1,
+    "nombre_mazo": "Demacia_Default",
+	"valor_mazo": 55,
+	"cartas_en_mazo":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+ },
+ {
+    "id_mazo": 2,
+    "nombre_mazo": "Noxus_Default",
+	"valor_mazo": 54,
+	"cartas_en_mazo":[38,37,36,35,34,33,32,31,30]
+ },
+ {
+    "id_mazo": 3,
+    "nombre_mazo": "Piltover_Zaun_Default",
+	"valor_mazo": 36,
+	"cartas_en_mazo":[104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119]
+ }
+]

@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Mazos {
 	
-	private String id;
+	private int id;
 	private String nombre;
 	private int valor;
 	private ArrayList<Integer> listaCartas;
 		
 	public Mazos() {}
 	
-	public Mazos(String id, String nombre, int valor, ArrayList<Integer> listaCartas) {
+	public Mazos(int id, String nombre, int valor, ArrayList<Integer> listaCartas) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -19,10 +19,10 @@ public class Mazos {
 		this.listaCartas = listaCartas;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getNombre() {

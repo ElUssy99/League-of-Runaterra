@@ -2,7 +2,7 @@ package Objects;
 
 public class Cartas {
 	
-	private int ID;
+	private int id;
 	private String tipo;
 	private String nombre;
 	private int coste;
@@ -13,10 +13,10 @@ public class Cartas {
 	
 	public Cartas() {}
 	
-	public Cartas(int iD, String tipo, String nombre, int coste, int ataque, int vida, String habilidadEspecial,
+	public Cartas(int id, String tipo, String nombre, int coste, int ataque, int vida, String habilidadEspecial,
 			String faccion) {
 		super();
-		ID = iD;
+		id = id;
 		this.tipo = tipo;
 		this.nombre = nombre;
 		this.coste = coste;
@@ -27,10 +27,10 @@ public class Cartas {
 	}
 	
 	public int getID() {
-		return ID;
+		return id;
 	}
 	public void setID(int iD) {
-		ID = iD;
+		id = iD;
 	}
 	public String getTipo() {
 		return tipo;
@@ -62,7 +62,7 @@ public class Cartas {
 	public void setVida(int vida) {
 		this.vida = vida;
 	}
-	public String isHabilidadEspecial() {
+	public String getHabilidadEspecial() {
 		return habilidadEspecial;
 	}
 	public void setHabilidadEspecial(String habilidadEspecial) {
@@ -77,7 +77,7 @@ public class Cartas {
 	
 	@Override
 	public String toString() {
-		return "Carta [ID=" + ID + ", tipo=" + tipo + ", nombre=" + nombre + ", coste=" + coste + ", ataque=" + ataque
+		return "Carta [ID=" + id + ", tipo=" + tipo + ", nombre=" + nombre + ", coste=" + coste + ", ataque=" + ataque
 				+ ", vida=" + vida + ", habilidadEspecial=" + habilidadEspecial + ", faccion=" + faccion + "]";
 	}
 	

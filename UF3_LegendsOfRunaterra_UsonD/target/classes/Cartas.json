@@ -1,0 +1,1063 @@
+[
+ {
+    "id": 1,
+    "tipo": "Comun",
+    "nombre_carta": "Conservador de magos",
+	"coste_invocacion": 1,
+	"ataque": 1,
+	"vida": 1,
+	"habilidad_especial": "Ultimo aliento: Crea en la mano un hechizo de coste 6 o mas de cualquier region que no sea Demacia",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 2,
+    "tipo": "Hechizo",
+    "nombre_carta": "Chaleco de cadenas",
+	"coste_invocacion": 1,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Proporciona inmunidad a un aliado",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 3,
+    "tipo": "Hechizo",
+    "nombre_carta": "Golpe radiante",
+	"coste_invocacion": 1,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Otorga +1|+1 a un aliado esta ronda",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 4,
+    "tipo": "Comun",
+    "nombre_carta": "Rastreador de plumas",
+	"coste_invocacion": 1,
+	"ataque": 2,
+	"vida": 1,
+	"habilidad_especial": "Retador",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 5,
+    "tipo": "Comun",
+    "nombre_carta": "Protector de acero brillante",
+	"coste_invocacion": 2,
+	"ataque": 3,
+	"vida": 2,
+	"habilidad_especial": "Otorga barrera a un aliado",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 6,
+    "tipo": "Epica",
+    "nombre_carta": "Defensor de vanguardia",
+	"coste_invocacion": 2,
+	"ataque": 2,
+	"vida": 2,
+	"habilidad_especial": "Resistente",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 7,
+    "tipo": "Hechizo",
+    "nombre_carta": "Combate singular",
+	"coste_invocacion": 2,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Hechizo Rapido: Un aliado golpea a un oponente",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 8,
+    "tipo": "Comun",
+    "nombre_carta": "Herrero de batalla",
+	"coste_invocacion": 2,
+	"ataque": 2,
+	"vida": 2,
+	"habilidad_especial": "Cuando invocas un aliado Epica, obtiene +1|+1",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 9,
+    "tipo": "Heroe",
+    "nombre_carta": "Lucian",
+	"coste_invocacion": 2,
+	"ataque": 4,
+	"vida": 3,
+	"habilidad_especial": "Doble ataque, La primera vez que muera un aliado en la ronda, prepara tu ataque",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 10,
+    "tipo": "Epica",
+    "nombre_carta": "Senna, Centinela de la luz",
+	"coste_invocacion": 3,
+	"ataque": 4,
+	"vida": 2,
+	"habilidad_especial": "La primera vez que Lucian muera esta partida, obtiene +1|+1 y Doble ataque",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 11,
+    "tipo": "Heore",
+    "nombre_carta": "Fiora",
+	"coste_invocacion": 3,
+	"ataque": 4,
+	"vida": 4,
+	"habilidad_especial": "Si Fiora mata a 4 enemigos y sobrevive, ganas la partida",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 12,
+    "tipo": "Comun",
+    "nombre_carta": "Duelista Laurent",
+	"coste_invocacion": 3,
+	"ataque": 3,
+	"vida": 2,
+	"habilidad_especial": "Concede retador a un aliado esta ronda",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 13,
+    "tipo": "Epica",
+    "nombre_carta": "Vanguardia primerahoja",
+	"coste_invocacion": 4,
+	"ataque": 2,
+	"vida": 2,
+	"habilidad_especial": "Cuando ataca obtiene +2|+2"
+},
+
+{
+    "id": 14,
+    "tipo": "Epica",
+    "nombre_carta": "Vanguardia ala plateada",
+	"coste_invocacion": 4,
+	"ataque": 2,
+	"vida": 1,
+	"habilidad_especial": "Cuando se invoca esta carta, invoca otra copia exacta de la misma",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 15,
+    "tipo": "Heroe",
+    "nombre_carta": "Garen",
+	"coste_invocacion": 5,
+	"ataque": 6,
+	"vida": 6,
+	"habilidad_especial": "Regeneracion, Al empezar la ronda, prepara tu ataque",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 16,
+    "tipo": "Comun",
+    "nombre_carta": "Lancero ala plateada",
+	"coste_invocacion": 5,
+	"ataque": 5,
+	"vida": 4,
+	"habilidad_especial": "Ultimo aliento: Crea una carta Epica en tu mano",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 17,
+    "tipo": "Heroe",
+    "nombre_carta": "Lux",
+	"coste_invocacion": 6,
+	"ataque": 4,
+	"vida": 5,
+	"habilidad_especial": "Barrera, Cuando gastas 6 de mana o mas en hechizos, crea una Chispa Final en tu mano",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 18,
+    "tipo": "Epica",
+    "nombre_carta": "Citrhia la audaz",
+	"coste_invocacion": 6,
+	"ataque": 6,
+	"vida": 6,
+	"habilidad_especial": "Cuando atacas, los demas aliados obtienen +1|+1 y temible",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 19,
+    "tipo": "Comun",
+    "nombre_carta": "Tianna, guardiana de la corona",
+	"coste_invocacion": 8,
+	"ataque": 7,
+	"vida": 7,
+	"habilidad_especial": "Cuando se invoca, prepara el ataque",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 20,
+    "tipo": "Hechizo",
+    "nombre_carta": "Juicio",
+	"coste_invocacion": 8,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Un aliado golpea a todos los enemigos",
+	"faccion": "Demacia"
+},
+
+{
+    "id": 30,
+    "tipo": "Epica",
+    "nombre_carta": "Capitan Farron",
+	"coste_invocacion": 8,
+	"ataque": 8,
+	"vida": 8,
+	"habilidad_especial": "Jugar: Cambia tu mano por el mismo número de Diezmar",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 31,
+    "tipo": "Rara",
+    "nombre_carta": "Justiciero despiadado",
+	"coste_invocacion": 7,
+	"ataque": 7,
+	"vida": 4,
+	"habilidad_especial": "Aspirante: Puede elegir la unidad enemiga que bloquea",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 32,
+    "tipo": "Rara",
+    "nombre_carta": "Minotauro justiciero",
+	"coste_invocacion": 6,
+	"ataque": 6,
+	"vida": 6,
+	"habilidad_especial": "Comienzo de ronda: aturde al enemigo más débil",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 33,
+    "tipo": "Heroe",
+    "nombre_carta": "Darius",
+	"coste_invocacion": 6,
+	"ataque": 6,
+	"vida": 5,
+	"habilidad_especial": "El nexo enemigo tiene 10 o menos de vida",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 34,
+    "tipo": "Epica",
+    "nombre_carta": "Ariete",
+	"coste_invocacion": 6,
+	"ataque": 0,
+	"vida": 12,
+	"habilidad_especial": "Atacar: Consigo +4|+0",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 35,
+    "tipo": "Epica",
+    "nombre_carta": "Ajuste de cuentas",
+	"coste_invocacion": 6,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Si tienes un aliado con 5 o más de poder, asesina a todas las unidades con 4 o menos de poder",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 36,
+    "tipo": "Heroe",
+    "nombre_carta": "Vladimir",
+	"coste_invocacion": 5,
+	"ataque": 5,
+	"vida": 5,
+	"habilidad_especial": "Atacar: Por cada otro aliado en ataque, inflige 1 de daño y 1 al nexo enemigo",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 37,
+    "tipo": "Comun",
+    "nombre_carta": "Velocidad del rayo",
+	"coste_invocacion": 5,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Inflige 2 de daño a una unidad enemiga y prepara el ataque",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 38,
+    "tipo": "Rara",
+    "nombre_carta": "Rugido intimidante",
+	"coste_invocacion": 5,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Aturde a todos los enemigos con 4 o menos de poder",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 39,
+    "tipo": "Comun",
+    "nombre_carta": "Rompescudos trifariano",
+	"coste_invocacion": 5,
+	"ataque": 6,
+	"vida": 5,
+	"habilidad_especial": "Temible- Solo se puede bloquear con enemigos de 3 o más de poder",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 40,
+    "tipo": "Rara",
+    "nombre_carta": "Maniobra decisiva",
+	"coste_invocacion": 5,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Aturde a un enemigo. Concede +2|+0 a todos los aliados esta ronda",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 41,
+    "tipo": "Epica",
+    "nombre_carta": "Kato, el Brazo",
+	"coste_invocacion": 5,
+	"ataque": 5,
+	"vida": 3,
+	"habilidad_especial": "Apoyo: Concede +3|+0",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 42,
+    "tipo": "Rara",
+    "nombre_carta": "Huesped aracnoide",
+	"coste_invocacion": 5,
+	"ataque": 5,
+	"vida": 3,
+	"habilidad_especial": "Cuando se me invoca, otorga a otros aliados arácnidos +2|+0",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 43,
+    "tipo": "Comun",
+    "nombre_carta": "General de la Legion",
+	"coste_invocacion": 5,
+	"ataque": 4,
+	"vida": 4,
+	"habilidad_especial": "Cuando se me invoca, consigo +1|+1 por cada unidad que has aturdido o retirado esta partida",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 44,
+    "tipo": "Rara",
+    "nombre_carta": "Diezmar",
+	"coste_invocacion": 5,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Inflige 4 de daño al nexo enemigo",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 45,
+    "tipo": "Epica",
+    "nombre_carta": "Veterano de la Legion",
+	"coste_invocacion": 4,
+	"ataque": 4,
+	"vida": 5,
+	"habilidad_especial": "Cuando otro aliado sobrevive al daño, le otorga +1|+0",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 46,
+    "tipo": "Epica",
+    "nombre_carta": "Shiraza, la Hoja",
+	"coste_invocacion": 4,
+	"ataque": 3,
+	"vida": 3,
+	"habilidad_especial": "Inflijo el doble de daño al nexo",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 47,
+    "tipo": "Rara",
+    "nombre_carta": "Jinete de basiliscos",
+	"coste_invocacion": 4,
+	"ataque": 5,
+	"vida": 2,
+	"habilidad_especial": "Alianza: Consigo +1|+1",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 48,
+    "tipo": "Rara",
+    "nombre_carta": "Favorito del publico",
+	"coste_invocacion": 4,
+	"ataque": 2,
+	"vida": 2,
+	"habilidad_especial": "Cuando se me invoca, consigo +1|+1 por cada aliado que tengas",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 49,
+    "tipo": "Rara",
+    "nombre_carta": "Evocador carmesi",
+	"coste_invocacion": 4,
+	"ataque": 5,
+	"vida": 5,
+	"habilidad_especial": "Cuando se me invoca, inflige 1 de daño a todos los demás aliados",
+	"faccion": "Noxus"
+},
+
+{
+    "id": 60,
+    "tipo": "Heroe",
+    "nombre_carta": "Zed" ,
+    "coste_invocacion": 3,
+    "ataque": 3,
+    "vida": 2,
+    "habilidad_especial": "Mientras ataca, ataca antes de su bloqueador.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 61,
+    "tipo": "Heroe",
+    "nombre_carta": "Shen" ,
+    "coste_invocacion": 4,
+    "ataque": 2,
+    "vida": 5,
+    "habilidad_especial": "Niega el siguiente daño que recibiría la unidad. Dura una ronda.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 62,
+    "tipo": "Heroe",
+    "nombre_carta": "Yasuo" ,
+    "coste_invocacion": 4,
+    "ataque": 4,
+    "vida": 3,
+    "habilidad_especial": "Mientras ataca, ataca antes de su bloqueador.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 63,
+    "tipo": "Heroe",
+    "nombre_carta": "Karma" ,
+    "coste_invocacion": 5,
+    "ataque": 4,
+    "vida": 3,
+    "habilidad_especial": "Estas iluminado cuando tienes 10 mana maximo.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 64,
+    "tipo": "Comun",
+    "nombre_carta": "Navori Bladescout" ,
+    "coste_invocacion": 1,
+    "ataque": 2,
+    "vida": 1,
+    "habilidad_especial": "Solo puede ser bloqueado por una unidad evasiva.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 65,
+    "tipo": "Rara",
+    "nombre_carta": "Fae Bladetwirler" ,
+    "coste_invocacion": 2,
+    "ataque": 1,
+    "vida": 3,
+    "habilidad_especial": "Mientras ataca, ataca antes de su bloqueador.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 66,
+    "tipo": "Comun",
+    "nombre_carta": "Greenglade Duo" ,
+    "coste_invocacion": 2,
+    "ataque": 2,
+    "vida": 1,
+    "habilidad_especial": "Solo puede ser bloqueado por una unidad evasiva.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 67,
+    "tipo": "Comun",
+    "nombre_carta": "Navori Conspirator" ,
+    "coste_invocacion": 2,
+    "ataque": 3,
+    "vida": 2,
+    "habilidad_especial": "Solo puede ser bloqueado por una unidad evasiva.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 68,
+    "tipo": "Comun",
+    "nombre_carta": "Emerald Awakener" ,
+    "coste_invocacion": 3,
+    "ataque": 2,
+    "vida": 2,
+    "habilidad_especial": "El daño que inflige esta unidad cura su Nexus esa cantidad.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 69,
+    "tipo": "Rara",
+    "nombre_carta": "Kinkou Wayfinder" ,
+    "coste_invocacion": 4,
+    "ataque": 2,
+    "vida": 3,
+    "habilidad_especial": "Invoca a dos aliados de 1 coste de nuestro mazo.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 70,
+    "tipo": "Rara",
+    "nombre_carta": "Jeweled Protector" ,
+    "coste_invocacion": 5,
+    "ataque": 4,
+    "vida": 4,
+    "habilidad_especial": "Concede un aliado en la mano +3 | +3.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 71,
+    "tipo": "Epica",
+    "nombre_carta": "Windfarer Hatchling" ,
+    "coste_invocacion": 7,
+    "ataque": 4,
+    "vida": 2,
+    "habilidad_especial": "Solo puede ser bloqueado por una unidad evasiva. Cuando me convoquen, dale a otros aliados +2 | +2 esta ronda.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 72,
+    "tipo": "Hechizo",
+    "nombre_carta": "Fantasma" ,
+    "coste_invocacion": 1,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Da evasion a un aliado por un turno",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 73,
+    "tipo": "Hechizo",
+    "nombre_carta": "Perspectiva de las edades" ,
+    "coste_invocacion": 2,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Crea un hechizo al azar en la mano. Iluminado: Crea 2 en su lugar.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 74,
+    "tipo": "Hechizo",
+    "nombre_carta": "Marca de la muerte" ,
+    "coste_invocacion": 3,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Elimina Efímero de un aliado para otorgarlo a un enemigo.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 75,
+    "tipo": "Hechizo",
+    "nombre_carta": "Disciplinas gemelas" ,
+    "coste_invocacion": 3,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Dale a un aliado +3 | +0 o +0 | +3 esta ronda.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 76,
+    "tipo": "Hechizo",
+    "nombre_carta": "Denegar" ,
+    "coste_invocacion": 4,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Detén un hechizo rapido, un hechizo lento o una habilidad.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 77,
+    "tipo": "Hechizo",
+    "nombre_carta": "Amanecer y anochecer" ,
+    "coste_invocacion": 6,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Invoca 2 copias exactas de un aliado. Son efimeros",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 78,
+    "tipo": "Hechizo",
+    "nombre_carta": "Llamarada de las Sombras" ,
+    "coste_invocacion": 6,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Concede a TODOS los seguidores que luchan efimero.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 79,
+    "tipo": "Hechizo",
+    "nombre_carta": "Ritual de renovacion" ,
+    "coste_invocacion": 7,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Sanar a un aliado 7. Roba una carta.",
+    "faccion": "Jonia"
+},
+
+{
+    "id": 80,
+    "tipo": "Hechizo",
+    "nombre_carta": "Recuerdos desvanecidos" ,
+    "coste_invocacion": 0,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "RAFAGA Elige un adepto y crea una copia de él con Endeble en la mano",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 81,
+    "tipo": "Comun",
+    "nombre_carta": "Carnicero voraz" ,
+    "coste_invocacion": 0,
+    "ataque": 3,
+    "vida": 2,
+    "habilidad_especial": "",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 82,
+    "tipo": "Hechizo",
+    "nombre_carta": "Absorbealmas" ,
+    "coste_invocacion": 1,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "VELOZ Drena 4 de vida a una unidad aliada",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 83,
+    "tipo": "Hechizo",
+    "nombre_carta": "Sensacion de hormigueo" ,
+    "coste_invocacion": 1,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "LENTO Si un aliado ha muerto esta ronda, invoca 2 Cria de araña",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 84,
+    "tipo": "Comun",
+    "nombre_carta": "Aristocrata desafortunado" ,
+    "coste_invocacion": 1,
+    "ataque": 1,
+    "vida": 1,
+    "habilidad_especial": "Ultimo aliento: Invoca 1 Cria de araña",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 85,
+    "tipo": "Hechizo",
+    "nombre_carta": "Marca de las Islas" ,
+    "coste_invocacion": 1,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "RAFAGA Otorga a un aliado +3|+3 y Endeble",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 86,
+    "tipo": "Comun",
+    "nombre_carta": "Isleño despistado" ,
+    "coste_invocacion": 1,
+    "ataque": 2,
+    "vida": 1,
+    "habilidad_especial": "Jugar: Otorga a un aliado de la mano Endeble y reduce su coste en 1",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 87,
+    "tipo": "Comun",
+    "nombre_carta": "Poro siniestro" ,
+    "coste_invocacion": 1,
+    "ataque": 1,
+    "vida": 1,
+    "habilidad_especial": "TEMIBLE",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 88,
+    "tipo": "Comun",
+    "nombre_carta": "Presa del carcelero" ,
+    "coste_invocacion": 1,
+    "ataque": 1,
+    "vida": 1,
+    "habilidad_especial": "Ultimo aliento: Crea otro adepto con Ultimo aliento de cualquier region que cueste 3 de mana o menos",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 89,
+    "tipo": "Comun",
+    "nombre_carta": "Terror aracnoide" ,
+    "coste_invocacion": 2,
+    "ataque": 3,
+    "vida": 2,
+    "habilidad_especial": "Ninguno",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 90,
+    "tipo": "Comun",
+    "nombre_carta": "Lanza negra" ,
+    "coste_invocacion": 2,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Si un aliado ha muerto esta ronda, inflinge 3 de daño a una unidad enemiga",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 91,
+    "tipo": "Comun",
+    "nombre_carta": "Guardian maldito" ,
+    "coste_invocacion": 2,
+    "ataque": 1,
+    "vida": 1,
+    "habilidad_especial": "Ultimo aliento: Invoca 1 Abominacion profuga",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 92,
+    "tipo": "Heroe",
+    "nombre_carta": "Elise" ,
+    "coste_invocacion": 2,
+    "ataque": 2,
+    "vida": 3,
+    "habilidad_especial": "Atacar: Invoca 1 Cria de araña en ataque",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 93,
+    "tipo": "Hechizo",
+    "nombre_carta": "igio del mas alla" ,
+    "coste_invocacion": 2,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Mata a un aliado para robar 2 cartas",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 94,
+    "tipo": "Comun",
+    "nombre_carta": "Reliquia embrujada" ,
+    "coste_invocacion": 2,
+    "ataque": 0,
+    "vida": 0,
+    "habilidad_especial": "Invoca 3 Espiritu desatado",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 95,
+    "tipo": "Comun",
+    "nombre_carta": "Espectro de la niebla" ,
+    "coste_invocacion": 2,
+    "ataque": 2,
+    "vida": 2,
+    "habilidad_especial": "Cuando se me invoca, otorgo +1|+0 a otros Espectros de la niebla aliados, esten donde esten",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 96,
+    "tipo": "Raro",
+    "nombre_carta": "Cuadriga de tiburones" ,
+    "coste_invocacion": 2,
+    "ataque": 3,
+    "vida": 1,
+    "habilidad_especial": "Cuando un aliado con Endeble ataca y me muero, vuelvo al ataque",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 97,
+    "tipo": "Comun",
+    "nombre_carta": "Pastora de almas" ,
+    "coste_invocacion": 2,
+    "ataque": 2,
+    "vida": 3,
+    "habilidad_especial": "Cuando invocas a un aliado con Endeble, obtiene +1|+1",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 98,
+    "tipo": "Heroe",
+    "nombre_carta": "Kalista" ,
+    "coste_invocacion": 3,
+    "ataque": 4,
+    "vida": 2,
+    "habilidad_especial": "TEMIBLE Me vinculo con un aliado y este obtiene +2|+0 mientras estamos vinculados. Mejora: He visto morir a 3 o mas aliados",
+    "faccion": "Isla de las Sombras"
+},
+{
+    "id": 99,
+    "tipo": "Heroe",
+    "nombre_carta": "Thresh",
+    "coste_invocacion": 5,
+    "ataque": 3,
+    "vida": 2,
+    "habilidad_especial": "CONTENDEIENTE Mejora: He visto morir a 6 o mas unidades",
+    "faccion": "Isla de las Sombras"
+},
+
+{
+    "id": 100,
+    "tipo": "Hechizo",
+    "nombre_carta":"Socavar" ,
+	"coste_invocacion": 0,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Inflige 2 de daño al nexo enemigo.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 101,
+    "tipo": "hechizo",
+    "nombre_carta":"Suplantar" ,
+	"coste_invocacion": 0,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Elige un adepto.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 102,
+    "tipo": "Comun",
+    "nombre_carta":"MK0:Trituracargas" ,
+	"coste_invocacion": 0,
+	"ataque": 0,
+	"vida": 1,
+	"habilidad_especial": "Contendiente",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 103,
+    "tipo": "Comun",
+    "nombre_carta":"Barril Caustico" ,
+	"coste_invocacion": 0,
+	"ataque": 0,
+	"vida": 1,
+	"habilidad_especial": "Endeble:ultimo aliente: inflige 1 de daño a ambos nexos.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 104,
+    "tipo": "Heroe",
+    "nombre_carta":"Teemo" ,
+	"coste_invocacion": 2,
+	"ataque": 2,
+	"vida": 2,
+	"habilidad_especial": "Elusion. Golpe al nexo: duplica el daño el total de Boletus venenosos del mazo del rival.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 105,
+    "tipo": "Comun",
+    "nombre_carta":"Escurridizo de chatarra" ,
+	"coste_invocacion": 1,
+	"ataque": 1,
+	"vida": 1,
+	"habilidad_especial": "ninguna",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 106,
+    "tipo": "Rara",
+    "nombre_carta":"Poro atrevido" ,
+	"coste_invocacion": 1,
+	"ataque": 1,
+	"vida": 1,
+	"habilidad_especial": "Elusion.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 107,
+    "tipo": "Comun",
+    "nombre_carta":"Gatastrofe" ,
+	"coste_invocacion": 1,
+	"ataque": 30,
+	"vida": 30,
+	"habilidad_especial": "Abrumar.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 108,
+    "tipo": "hechizo",
+    "nombre_carta":"Golpe Radiante" ,
+	"coste_invocacion": 1,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Inflige 2 de daño al nexo enemigo.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 109,
+    "tipo": "ePICA",
+    "nombre_carta":"Panda de roedores" ,
+	"coste_invocacion": 2,
+	"ataque": 2,
+	"vida": 2,
+	"habilidad_especial": "Cuando se me invoca,se crea 1 nube de setas.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 110,
+    "tipo": "Comun",
+    "nombre_carta":"Mascafuegos" ,
+	"coste_invocacion": 2,
+	"ataque": 0,
+	"vida": 2,
+	"habilidad_especial": "Contendiente. Descartame para invocarme",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 111,
+    "tipo": "Epica",
+    "nombre_carta":"Conservador Carmesi" ,
+	"coste_invocacion": 3,
+	"ataque": 3,
+	"vida": 2,
+	"habilidad_especial": "Cuando sobrevive al daño se invoca una unidad carmesi.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 112,
+    "tipo": "Heroe",
+    "nombre_carta":"Ezreal" ,
+	"coste_invocacion": 3,
+	"ataque": 2,
+	"vida": 4,
+	"habilidad_especial": "Elusion. Golpe al nexo: crea 1 disparo mistico en la mesa, cuando lanzas un hechizo, inflige 2 de daño al nexo enemigo.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 113,
+    "tipo": "Hechizo",
+    "nombre_carta":"Espiral de muerte de draven" ,
+	"coste_invocacion": 3,
+	"ataque": 0,
+	"vida": 0,
+	"habilidad_especial": "Veloz. Un aliado en combate golpea a un enemigo en combate.añade 1 draven al mazo",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 114,
+    "tipo": "Rara",
+    "nombre_carta":"Saqueador de la legion" ,
+	"coste_invocacion": 3,
+	"ataque": 3,
+	"vida": 2,
+	"habilidad_especial": "Al atacar otorga +1+1 a los saqueadores de la legion aliados esten donde esten.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 115,
+    "tipo": "Comun",
+    "nombre_carta":"Dinosaurio escamado" ,
+	"coste_invocacion": 3,
+	"ataque": 2,
+	"vida": 2,
+	"habilidad_especial": "al Jugar tiene 5/2 o 2/5.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 116,
+    "tipo": "Heroe",
+    "nombre_carta":"Draven" ,
+	"coste_invocacion": 3,
+	"ataque": 3,
+	"vida": 3,
+	"habilidad_especial": "Ataque rapido. Jugar o golpear: crea 1 hacha giratoria en la mano.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 117,
+    "tipo": "Comun",
+    "nombre_carta":"Vanguardia imperterrita" ,
+	"coste_invocacion": 3,
+	"ataque": 3,
+	"vida": 3,
+	"habilidad_especial": "ninguna",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 118,
+    "tipo": "Epica",
+    "nombre_carta":"Evocador esmeralda" ,
+	"coste_invocacion": 3,
+	"ataque": 2,
+	"vida": 2,
+	"habilidad_especial": "Robo de vida.",
+	"faccion": "Piltover y Zaun"
+},
+{
+    "id": 119,
+    "tipo": "Rara",
+    "nombre_carta":"Poro fuerte" ,
+	"coste_invocacion": 3,
+	"ataque": 3,
+	"vida": 3,
+	"habilidad_especial": "Abrumar.",
+	"faccion": "Piltover y Zaun"
+ } 
+
+]
