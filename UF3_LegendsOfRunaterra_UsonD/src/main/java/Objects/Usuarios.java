@@ -5,69 +5,70 @@ import java.util.Arrays;
 
 public class Usuarios {
 	
-	private int id;
-	private String nombre;
-	private String contra;
-	private ArrayList<Integer> listaCartas;
-	private ArrayList<Integer> listaMazos;
+	private int id_usuario;
+	private String nombre_usuario;
+	private String contrasenya_usuario;
+	private ArrayList<Integer> cartas_usuario;
+	private ArrayList<Integer> mazos_usuario;
 	
 	public Usuarios() {
 		super();
 	}
 
-	public Usuarios(int id, String nombre, String contra, ArrayList<Integer> listaCartas, ArrayList<Integer> listaMazos) {
+	public Usuarios(int id_usuario, String nombre_usuario, String contrasenya_usuario,
+			ArrayList<Integer> cartas_usuario, ArrayList<Integer> mazos_usuario) {
 		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.contra = contra;
-		this.listaCartas = listaCartas;
-		this.listaMazos = listaMazos;
+		this.id_usuario = id_usuario;
+		this.nombre_usuario = nombre_usuario;
+		this.contrasenya_usuario = contrasenya_usuario;
+		this.cartas_usuario = cartas_usuario;
+		this.mazos_usuario = mazos_usuario;
 	}
 
-	public int getId() {
-		return id;
+	public int getId_usuario() {
+		return id_usuario;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId_usuario(int id_usuario) {
+		this.id_usuario = id_usuario;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getNombre_usuario() {
+		return nombre_usuario;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombre_usuario(String nombre_usuario) {
+		this.nombre_usuario = nombre_usuario;
 	}
 
-	public String getContra() {
-		return contra;
+	public String getContrasenya_usuario() {
+		return contrasenya_usuario;
 	}
 
-	public void setContra(String contra) {
-		this.contra = contra;
-	}
-	
-	public ArrayList<Integer> getListaCartas() {
-		return listaCartas;
+	public void setContrasenya_usuario(String contrasenya_usuario) {
+		this.contrasenya_usuario = contrasenya_usuario;
 	}
 
-	public void setListaCartas(ArrayList<Integer> listaCartas) {
-		this.listaCartas = listaCartas;
+	public ArrayList<Integer> getCartas_usuario() {
+		return cartas_usuario;
 	}
 
-	public ArrayList<Integer> getListaMazos() {
-		return listaMazos;
+	public void setCartas_usuario(ArrayList<Integer> cartas_usuario) {
+		this.cartas_usuario = cartas_usuario;
 	}
 
-	public void setListaMazos(ArrayList<Integer> listaMazos) {
-		this.listaMazos = listaMazos;
+	public ArrayList<Integer> getMazos_usuario() {
+		return mazos_usuario;
+	}
+
+	public void setMazos_usuario(ArrayList<Integer> mazos_usuario) {
+		this.mazos_usuario = mazos_usuario;
 	}
 
 	@Override
 	public String toString() {
-		return "Usuarios [id=" + id + ", nombre=" + nombre + ", contra=" + contra + ", listaCartas=" + listaCartas
-				+ ", listaMazos=" + listaMazos + "]";
+		return "Usuarios [id_usuario=" + id_usuario + ", nombre_usuario=" + nombre_usuario + ", contrasenya_usuario="
+				+ contrasenya_usuario + ", cartas_usuario=" + cartas_usuario + ", mazos_usuario=" + mazos_usuario + "]";
 	}
 	
 }

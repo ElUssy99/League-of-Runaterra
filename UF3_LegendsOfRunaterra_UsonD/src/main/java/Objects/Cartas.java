@@ -4,81 +4,97 @@ public class Cartas {
 	
 	private int id;
 	private String tipo;
-	private String nombre;
-	private int coste;
+	private String nombre_carta;
+	private int coste_invocacion;
 	private int ataque;
 	private int vida;
-	private String habilidadEspecial;
+	private String habilidad_especial;
 	private String faccion;
 	
 	public Cartas() {}
-	
-	public Cartas(int id, String tipo, String nombre, int coste, int ataque, int vida, String habilidadEspecial,
-			String faccion) {
+
+	public Cartas(int id, String tipo, String nombre_carta, int coste_invocacion, int ataque, int vida,
+			String habilidad_especial, String faccion) {
 		super();
-		id = id;
+		this.id = id;
 		this.tipo = tipo;
-		this.nombre = nombre;
-		this.coste = coste;
+		this.nombre_carta = nombre_carta;
+		this.coste_invocacion = coste_invocacion;
 		this.ataque = ataque;
 		this.vida = vida;
-		this.habilidadEspecial = habilidadEspecial;
+		this.habilidad_especial = habilidad_especial;
 		this.faccion = faccion;
 	}
-	
-	public int getID() {
+
+	public int getId() {
 		return id;
 	}
-	public void setID(int iD) {
-		id = iD;
+
+	public void setId(int id) {
+		this.id = id;
 	}
+
 	public String getTipo() {
 		return tipo;
 	}
+
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public String getNombre() {
-		return nombre;
+
+	public String getNombre_carta() {
+		return nombre_carta;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+
+	public void setNombre_carta(String nombre_carta) {
+		this.nombre_carta = nombre_carta;
 	}
-	public int getCoste() {
-		return coste;
+
+	public int getCoste_invocacion() {
+		return coste_invocacion;
 	}
-	public void setCoste(int coste) {
-		this.coste = coste;
+
+	public void setCoste_invocacion(int coste_invocacion) {
+		this.coste_invocacion = coste_invocacion;
 	}
+
 	public int getAtaque() {
 		return ataque;
 	}
+
 	public void setAtaque(int ataque) {
 		this.ataque = ataque;
 	}
+
 	public int getVida() {
 		return vida;
 	}
+
 	public void setVida(int vida) {
 		this.vida = vida;
 	}
-	public String getHabilidadEspecial() {
-		return habilidadEspecial;
+
+	public String getHabilidad_especial() {
+		return habilidad_especial;
 	}
-	public void setHabilidadEspecial(String habilidadEspecial) {
-		this.habilidadEspecial = habilidadEspecial;
+
+	public void setHabilidad_especial(String habilidad_especial) {
+		this.habilidad_especial = habilidad_especial;
 	}
+
 	public String getFaccion() {
 		return faccion;
 	}
+
 	public void setFaccion(String faccion) {
 		this.faccion = faccion;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Carta [ID=" + id + ", tipo=" + tipo + ", nombre=" + nombre + ", coste=" + coste + ", ataque=" + ataque
-				+ ", vida=" + vida + ", habilidadEspecial=" + habilidadEspecial + ", faccion=" + faccion + "]";
+		return "Cartas [id=" + id + ", tipo=" + tipo + ", nombre_carta=" + nombre_carta + ", coste_invocacion="
+				+ coste_invocacion + ", ataque=" + ataque + ", vida=" + vida + ", habilidad_especial="
+				+ habilidad_especial + ", faccion=" + faccion + "]";
 	}
 	
 }
