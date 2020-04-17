@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.UnknownHostException;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -13,15 +12,11 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.sound.midi.Synthesizer;
-
 import org.bson.Document;
-import org.bson.conversions.Bson;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
@@ -54,7 +49,7 @@ public class LeagueOfRunaterra {
 		
 		//cargarUsuarios(database);
 		cargarCartas(database);
-		//cargarMazos(database);
+		cargarMazos(database);
 		
 		return database;
 	}
@@ -159,6 +154,8 @@ public class LeagueOfRunaterra {
 	}
 
 	public static void cargarMazos(MongoDatabase database) {
+		boolean mensaje = false;
+		
 		MongoCollection<Document> collection = database.getCollection("Mazos");
 
 		collection.drop();
@@ -181,7 +178,33 @@ public class LeagueOfRunaterra {
 
 				Document doc = new Document("id_mazo", mazo.getId_mazo()).append("nombre_mazo", mazo.getNombre_mazo())
 						.append("valor_mazo", mazo.getValor_mazo()).append("cartas_en_mazo", mazo.getCartas_en_mazo());
-				collection.insertOne(doc);
+				
+				// Comprobar si existen los mazos antes de insertarlos en la Base de Datos
+				FindIterable<Document> docs = collection.find();
+
+				boolean mazo1 = false;
+				boolean mazo2 = false;
+				for (Document document : docs) {
+					if (document.getInteger("id_mazo") == 1) {
+						mazo1 = true;
+					}
+					if (document.getInteger("id_mazo") == 2) {
+						mazo2 = true;
+					}
+				}
+				
+				if (mazo1 == false) {
+					if (doc.getInteger("id_mazo") == 1) {
+						collection.insertOne(doc);
+						mensaje = true;
+					}
+				}
+				if (mazo2 == false) {
+					if (doc.getInteger("id_mazo") == 2) {
+						collection.insertOne(doc);
+						mensaje = true;
+					}
+				}
 			}
 
 		} catch (FileNotFoundException e) {
@@ -191,8 +214,10 @@ public class LeagueOfRunaterra {
 		} catch (org.json.simple.parser.ParseException e) {
 			e.printStackTrace();
 		}
-
-		System.out.println("¡Mazos cargados correctamente en la coleccion!");
+		
+		if (mensaje == true) {
+			System.out.println("¡Mazos cargados correctamente en la coleccion!");
+		}
 	}
 	
 	public static void menuPrincipal(MongoDatabase database) {
@@ -273,8 +298,7 @@ public class LeagueOfRunaterra {
 			System.out.println("||=====================||");
 			System.out.println("	1. Mazos");
 			System.out.println("	2. Tienda");
-			System.out.println("	3. Tus cartas");
-			System.out.println("	4. Log out");
+			System.out.println("	3. Log out");
 			System.out.print("Escoge una opcion: ");
 			int opcion = entrada.nextInt();
 			
@@ -286,9 +310,6 @@ public class LeagueOfRunaterra {
 					tienda(database, usuario);
 					break;
 				case 3:
-					
-					break;
-				case 4:
 					continuar = false;
 					menuPrincipal(database);
 					break;
@@ -297,32 +318,6 @@ public class LeagueOfRunaterra {
 				}
 		}
 	}
-	
-	/*public static void tusCartas(MongoDatabase database, Document usuario) {
-		MongoCollection<Document> collectionU = database.getCollection("Usuarios");
-
-		Document find = new Document("id_usuario", usuario.get("id_usuario"));
-		MongoCursor<Document> resutl = collectionU.find(find).iterator();
-		
-		Usuarios u = new Usuarios();
-		if (resutl.hasNext()) {
-			Document d = resutl.next();
-			
-			u.setId_usuario(d.getInteger("id_usuario"));
-			u.setNombre_usuario(d.getString("nombre_usuario"));
-			u.setContrasenya_usuario(d.getString("contrasenya_usuario"));
-			if (d.get("cartas_usuario") != null) {
-				listaCartas = (ArrayList<Integer>) d.get("cartas_usuario");
-			}
-			u.setCartas_usuario(listaCartas);
-			if (d.get("mazos_usuario") != null) {
-				listaMazos = (ArrayList<Integer>) d.get("mazos_usuario");
-			}
-			u.setMazos_usuario(listaMazos);
-			
-			System.out.println("  " + u.toString());
-		}
-	}*/
 	
 	public static void mazos(MongoDatabase database, Document usuario) {
 		Scanner entrada = new Scanner(System.in);
@@ -334,10 +329,9 @@ public class LeagueOfRunaterra {
 			System.out.println("||        Mazos        ||");
 			System.out.println("||=====================||");
 			System.out.println("	1. Nuevo mazo");
-			System.out.println("	2. Editar mazo (No funcional)");
-			System.out.println("	3. Borrar mazo");
-			System.out.println("	4. Cargar mazos predefinidos");
-			System.out.println("	5. <-- Atras");
+			System.out.println("	2. Editar mazo");
+			System.out.println("	3. Cargar mazos predefinidos");
+			System.out.println("	4. <-- Atras");
 			System.out.print("Escoge una opcion: ");
 			int opcion = entrada.nextInt();
 			
@@ -346,15 +340,12 @@ public class LeagueOfRunaterra {
 					nuevoMazo(database, usuario);
 					break;
 				case 2:
-					System.out.println("Lo sentimos pero en estos momentos no se pueden editar los mazos. Vuelva en otro momento.");
+					editarMazo(database, usuario);
 					break;
 				case 3:
-					eliminarMazo(database, usuario);
-					break;
-				case 4:
 					cargarMazosPredefinidos(database, usuario);
 					break;
-				case 5:
+				case 4:
 					continuar = false;
 					juego(database, usuario);
 					break;
@@ -422,22 +413,19 @@ public class LeagueOfRunaterra {
 			if (id == -1) {
 				break;
 			} else {
-				cartas.add(id);
+				// Si el ID de la Carta que introduce el usuario existe en la lista de Cartas que tiene el mismo, se añade al Mazo
+				for (Number idCarta : listaCartas) {
+					if (id == idCarta.intValue()) {
+						cartas.add(id);
+						contador++;
+						existe = true;
+						break;
+					}
+				}
 				
-				// Peta porque al parecer la listaCartas me lo compara como Long
-				// Si el ID de la Carta que introduce el usuario existe en la lista de Cartas que tiene el mismo, se añade al Mazo 
-//				for (Integer idCarta : listaCartas) {
-//					if (id == idCarta) {
-//						
-//						contador++;
-//						existe = true;
-//						break;
-//					}
-//				}
-//				
-//				if (existe == false) {
-//					System.err.println("El ID de la Carta introducido no existe, por favor intenta con otra.");
-//				}
+				if (existe == false) {
+					System.err.println("El ID de la Carta introducido no existe, por favor intenta con otra.");
+				}
 			}
 		}
 		
@@ -449,7 +437,6 @@ public class LeagueOfRunaterra {
 		
 		int lastID = 0;
 		for (Document document : docs) {
-			//System.out.println(document);
 			System.out.println(document.get("id_mazo") + " - " + document.get("nombre_mazo") + " - " + document.get("valor_mazo") + " - " + document.get("cartas_en_mazo"));
 			lastID = document.getInteger("id_mazo");
 		}
@@ -527,7 +514,6 @@ public class LeagueOfRunaterra {
 			}
 		}
 		
-		// Me falta maximo 2 cartas iguales.
 		// Maximo cosete de invocacion
 		if (costeInvocacione <= 60) {
 			// Numero maximo de facciones
@@ -564,21 +550,20 @@ public class LeagueOfRunaterra {
 		
 	}
 	
-	public static void eliminarMazo(MongoDatabase database, Document usuario) {
+	public static void editarMazo(MongoDatabase database, Document usuario) {
 		Scanner entrada = new Scanner(System.in);
 		
 		System.out.println("||=====================||");
 		System.out.println("|| LEAGUE OF RUNATERRA ||");
-		System.out.println("||     Borrar  Mazo    ||");
-		System.out.println("||=====================||");
+		System.out.println("||    Editar Mazos     ||");
+		System.out.println("||=====================||\n");
 		
 		ArrayList<Integer> listaCartas = new ArrayList<Integer>();
 		ArrayList<Integer> listaMazos = new ArrayList<Integer>();
 		
-		// Guardar el usuario logueado
 		MongoCollection<Document> collectionU = database.getCollection("Usuarios");
 
-		Document find = new Document("id", usuario.get("id"));
+		Document find = new Document("id_usuario", usuario.get("id_usuario"));
 		MongoCursor<Document> resutl = collectionU.find(find).iterator();
 		
 		Usuarios u = new Usuarios();
@@ -596,34 +581,141 @@ public class LeagueOfRunaterra {
 			System.out.println("  " + u.toString());
 		}
 		
-		// Recoger el ID del Mazo a eliminar
-		System.out.print("\nInserte el ID del mazo que quiere eliminar: ");
-		int id = entrada.nextInt();
+		String opcion = "";
+		String nuevoNombre = "";
 		
-		// Recorrer la lista de Mazos para eliminar el que ha introducido el usuario
-		for (Integer idMazo : listaMazos) {
-			if (id == idMazo) {
-				int index = listaMazos.indexOf(id);
-				listaMazos.remove(index);
-				
-				Document query = new Document("id_usuario", u.getId_usuario());
-				Document newDoc = new Document("mazos_usuario", listaMazos);
-				Document updateDoc = new Document("$set", newDoc);
-				
-				collectionU.updateOne(query, updateDoc);
-				
-				MongoCollection<Document> collectionM = database.getCollection("Mazos");
-				Document d = new Document("id_mazo", id);
-				((Document) collectionM).remove(d);
+		System.out.println("ID de Mazos:");
+		for (Integer integer : listaMazos) {
+			System.out.print(integer + " ");
+		}
+		
+		System.out.print("Introduce el ID del Mazo que quieres editar: ");
+		int idMazo = entrada.nextInt();
+		
+		ArrayList<Integer> listaCartasMazo = new ArrayList<Integer>();
+		
+		MongoCollection<Document> collectionM = database.getCollection("Usuarios");
+		
+		Document findM = new Document("id_mazo", idMazo);
+		MongoCursor<Document> resutlM = collectionU.find(find).iterator();
+		
+		Mazos m = new Mazos();
+		if (resutlM.hasNext()) {
+			Document d = resutlM.next();
+			
+			m.setId_mazo(d.getInteger("id_mazo"));
+			m.setNombre_mazo(d.getString("nombre_mazo"));
+			m.setValor_mazo(d.getInteger("valor_mazo"));
+			if (d.get("cartas_en_mazo") != null) {
+				listaCartasMazo = (ArrayList<Integer>) d.get("cartas_en_mazo");
 			}
+			u.setCartas_usuario(listaCartasMazo);
+			
+			System.out.println("\n  " + u.toString());
+		}
+		
+		System.out.println("\nEditar nombre? (Si/No)");
+		opcion = entrada.nextLine();
+		
+		if (opcion.equalsIgnoreCase("si")) {
+			System.out.print("\nIntroduce el nuevo nombre del Mazo: ");
+			nuevoNombre = entrada.nextLine();
+		}
+		
+		System.out.println("\nQuieres editar las cartas del Mazo? (Si/No)");
+		opcion = entrada.nextLine();
+		
+		if (opcion.equalsIgnoreCase("si")) {
+			boolean editar = true;
+			
+			while (editar) {
+				System.out.println("Eliminar (1) | Añadir (2) | Acabar (-1):");
+				int opcionMazo = entrada.nextInt();
+				
+				if (opcionMazo == 1) {
+					boolean continuar = true;
+					boolean existe = false;
+					
+					for (Number integer : listaCartasMazo) {
+						System.out.print(integer.intValue() + " ");
+					}
+					
+					while (continuar) {
+						System.out.print("  Introduce un ID de Carta (-1 acabar): ");
+						int id = entrada.nextInt();
+						
+						if (id == -1) {
+							continuar = false;
+							break;
+						} else {
+							for (Number idCarta : listaCartasMazo) {
+								if (id == idCarta.intValue()) {
+									listaCartasMazo.remove(id);
+									existe = true;
+									break;
+								}
+							}
+							
+							if (existe == false) {
+								System.err.println("El ID de la Carta introducido no existe, por favor intenta con otra.");
+							}
+						}
+					}
+				} else if (opcionMazo == 2) {
+					boolean continuar = true;
+					boolean existe = false;
+					
+					for (Number integer : listaCartas) {
+						System.out.print(integer.intValue() + " ");
+					}
+					
+					while (continuar) {
+						System.out.print("  Introduce un ID de Carta (-1 acabar): ");
+						int id = entrada.nextInt();
+						
+						if (id == -1) {
+							continuar = false;
+							break;
+						} else {
+							for (Number idCarta : listaCartas) {
+								if (id == idCarta.intValue()) {
+									listaCartasMazo.add(id);
+									existe = true;
+									break;
+								}
+							}
+							
+							if (existe == false) {
+								System.err.println("El ID de la Carta introducido no existe, por favor intenta con otra.");
+							}
+						}
+					}
+				} else if (opcionMazo == -1) {
+					editar = false;
+					break;
+				}
+			}
+			
+			// Hacer el update nombre
+			Document queryNombre = new Document("id_mazo", m.getId_mazo());
+			Document newDocNombre = new Document("cartas_de_mazo", listaCartasMazo);
+			Document updateDocNombre = new Document("$set", newDocNombre);
+			
+			collectionM.updateOne(queryNombre, updateDocNombre);
+			
+			// Hacer el update cartas
+			Document queryCartas = new Document("id_mazo", m.getId_mazo());
+			Document newDocCartas = new Document("cartas_de_mazo", listaCartasMazo);
+			Document updateDocCartas = new Document("$set", newDocCartas);
+			
+			collectionM.updateOne(queryCartas, updateDocCartas);
 		}
 	}
 	
 	public static void cargarMazosPredefinidos(MongoDatabase database, Document usuario) {
 		// Buscar en la base de datos los Mazos con ID 1 y 2
-		// Tengo que cambiar el metodo de borrar, para que no me borre estos 2 Mazos
 		
-		System.out.println("Cargando los Mazos Predefinidos...");
+		System.out.println("Cargando los Mazos Predefinidos...\n");
 		
 		ArrayList<Integer> listaCartas = new ArrayList<Integer>();
 		ArrayList<Integer> listaMazos = new ArrayList<Integer>();
@@ -654,13 +746,12 @@ public class LeagueOfRunaterra {
 		for (Document document : docs) {
 			if (document.get("id_mazo").equals(1) || document.get("id_mazo").equals(2)) {
 				System.out.println(document.get("id_mazo") + " - " + document.get("nombre_mazo") + " - " + document.get("valor_mazo") + " - " + document.get("cartas_en_mazo"));
-				// Falta saber si en el la lista de Mazos, le usuario tiene ya los mazos predefinidos
-				listaMazos.add(document.getInteger("id"));
+				listaMazos.add(document.getInteger("id_mazo"));
 			}
 		}
 		
 		// Hacer el update
-		Document query = new Document("id", u.getId_usuario());
+		Document query = new Document("id_usuario", u.getId_usuario());
 		Document newDoc = new Document("mazos_usuario", listaMazos);
 		Document updateDoc = new Document("$set", newDoc);
 		
@@ -697,7 +788,6 @@ public class LeagueOfRunaterra {
 		}
 	}
 	
-	// NO ME FUNCIONA BIEN EL UPDATE, NO SE POR QUE NO ME LO HACE
 	public static void comprar(MongoDatabase database, Document usuario) {
 		Scanner entrada = new Scanner(System.in);
 		
@@ -726,14 +816,15 @@ public class LeagueOfRunaterra {
 		
 		MongoCollection<Document> collectionM = database.getCollection("Cartas");
 		FindIterable<Document> docs = collectionM.find();
-				
+		
 		int saltoDeLinea = 0;
 		System.out.println("");
 		for (Document document : docs) {
-			System.out.println(document.get("id") + " - " + document.get("tipo") + " - " + document.get("nombre_carta") + " - " + document.get("coste_invocacion") + " - " + document.get("ataque") + " - " + document.get("vida") + " - " + document.get("habilidad_especial") + " - " + document.get("faccion"));
+			System.out.println("	" + document.get("id") + " - " + document.get("tipo") + " - " + document.get("nombre_carta") + " - " + document.get("coste_invocacion") + " - " + document.get("ataque") + " - " + document.get("vida") + " - " + document.get("habilidad_especial") + " - " + document.get("faccion"));
 			saltoDeLinea++;
 			if (saltoDeLinea == 6) {
 				System.out.println("");
+				saltoDeLinea = 0;
 			}
 		}
 		
@@ -759,12 +850,12 @@ public class LeagueOfRunaterra {
 				}
 			}
 			if (coincide == false) {
-				System.err.println("No existe esa Carta. Prueba con otra.");
+				System.err.println("	No existe esa Carta. Prueba con otra.");
 			}
 		}
 		
 		// Update de la lista de cartas del Usuario
-		Document query = new Document("id", u.getId_usuario());
+		Document query = new Document("id_usuario", u.getId_usuario());
 		Document newDoc = new Document("cartas_usuario", listaCartas);
 		Document updateDoc = new Document("$set", newDoc);
 		
